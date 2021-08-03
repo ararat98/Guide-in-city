@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-body img{
+img{
+   max-width: 100%;
    object-fit: cover;
 }
 
@@ -104,7 +105,7 @@ select {
     font-family: Manrope-Bold;
 }
 
-a img {
+.mainNav_a_b img {
     width: 30px;
     height: 30px;
 }
@@ -171,22 +172,26 @@ a img {
     display: flex;
     justify-content: space-between;
     width: 675px;
+    max-width: 100%;
 }
 
 .mainNav_a_b {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 
 #slider {
     display: flex;
-    justify-content: space-between;
-    height: 150px;
+    justify-content: center;
     align-items: center;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 20px auto 0;
 }
-
+#slider img{
+    margin: 0 10px 20px 10px;
+}
 #slider div {
     width: 160px;
     height: 70px;
@@ -564,9 +569,8 @@ div#dots {
     .CardsBlock{
         flex-wrap: wrap;
     }
-    #slider img:nth-child(odd){
-        width: 0;
-        height: 0;
+    #slider{
+       flex-wrap: wrap;
     }
 
     #explore{
@@ -583,10 +587,11 @@ div#dots {
     } 
     
     #mainNav{
-        width: auto;
-        height: auto;
-        flex-direction: column;
-        padding: 30px 0;
+        width: 100%;
+    	min-width: 320px;
+    	height: auto;
+    	flex-direction: column;
+    	padding: 30px;
     }
 
     .mainNav_a_b::before{
@@ -642,5 +647,20 @@ div#dots {
     }
     #footerLeft select{
         margin-bottom: 20px;
+    }
+    #mainNav2{
+       flex-wrap: wrap;
+       width: 100%;
+    }
+    .mainNav_a_b {
+       width: 100%;
+       margin: 10px;
+    }
+    .search-input{
+       margin: 10px;
+    }
+    #mainNav2 input {
+    	width: 100% !important;
+    	border-right: none !important;
     }
 }
